@@ -15,7 +15,7 @@ export default function Routes() {
             <Switch>
                 <Route path='/' exact> <Logon /> </Route>
                 <Route path='/register' exact> <Register /> </Route>
-                <Route path='/profile' exact> <Profile /> </Route>
+                <Route path='/Profile' exact> <Profile /> </Route>
                 <Route path='/incidents/new' exact> <NewIncident /> </Route>
             </Switch>
         </BrowserRouter>

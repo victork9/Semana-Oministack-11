@@ -17,10 +17,10 @@ export default function Logon() {
         event.preventDefault();
 
         try {
-            const response = await api.post('session', { id });
+            const response = await api.post('sessions', { id });
 
-            localStorage.setItem('ongId', response.data.ong.id);
-            localStorage.setItem('ongName', response.data.ong.name);
+           await localStorage.setItem('ongId', id);
+            await localStorage.setItem('ongName', response.data.name);
 
             history.push('/profile');
         }
@@ -36,7 +36,7 @@ export default function Logon() {
 
                 <form onSubmit={ event => handleLogin(event) }>
                     <h1>Faça seu login</h1>
-
+        
                     <input 
                         type="text" 
                         placeholder="Preencha com sua ID"

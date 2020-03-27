@@ -20,13 +20,13 @@ export default function NewIncident() {
         event.preventDefault();
 
         try{
-            await api.post('incidents/new', 
+            await api.post('incidents', 
                 { title, description, value }, 
-                { headers: { Authorization: ongId } }
+                { headers: { Autorization: ongId } }
             );
 
             alert('Caso cadastrado!');
-            history.push('/profile')
+            history.push('/Profile')
         }
         catch(err) {
             alert('Erro ao cadastrar o caso!');
@@ -44,7 +44,7 @@ export default function NewIncident() {
                 
                     <Link to="/profile" className="link">
                         <FiArrowLeft />
-                        Voltar para os casos
+                        Voltar para home
                     </Link>
                 </section>
 
